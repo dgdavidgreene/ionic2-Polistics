@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 // import {bootstrap} from '@angular/platform-browser-dynamic';
 import 'rxjs/Rx'
 import {BackandService} from '../../providers/backandService'
-import {GeoCodingService} from '../../app/components/utilities/geocoding/geocoding.service'
+
 
 @Component({
     templateUrl: 'login.html',
@@ -23,7 +23,7 @@ export class LoginPage {
     confirmNewPassword: string = '';
 
 
-    constructor(public backandService:BackandService, private geoCodingService: GeoCodingService ) { 
+    constructor(public backandService:BackandService) { 
         this.auth_type = backandService.getAuthType();
         this.auth_status = backandService.getAuthStatus();
         this.loggedInUser = backandService.getUsername();
